@@ -57,6 +57,9 @@ RUN echo "xdebug.remote_port=9001" >> /usr/local/etc/php/conf.d/docker-php-ext-x
 RUN echo 'alias sf="php app/console"' >> ~/.bashrc
 RUN echo 'alias sf3="php bin/console"' >> ~/.bashrc
 
+RUN mkdir -p /root/.ssh
+RUN chmod 700 /root/.ssh/id_rsa
+RUN echo "Host *\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
 
 RUN apt-get install libldap2-dev -y 
 RUN docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu
