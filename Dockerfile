@@ -2,7 +2,8 @@
 FROM php:7.0-fpm
 ARG TIMEZONE
 
-MAINTAINER Maxence POUTORD <maxence.poutord@gmail.com>
+# Based on the work of MAINTAINER Maxence POUTORD <maxence.poutord@gmail.com>
+MAINTAINER Danny Bollaert <Danny.Bollaert@gmail.com>
 
 RUN apt-get install curl -y
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - && apt-get install nodejs -y
