@@ -58,7 +58,6 @@ RUN echo 'alias sf="php app/console"' >> ~/.bashrc
 RUN echo 'alias sf3="php bin/console"' >> ~/.bashrc
 
 RUN mkdir -p /root/.ssh
-RUN chmod 700 /root/.ssh/id_rsa
 RUN echo "Host *\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
 
 RUN apt-get install libldap2-dev -y 
