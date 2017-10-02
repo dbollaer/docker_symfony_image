@@ -63,6 +63,6 @@ RUN echo "Host *\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
 RUN apt-get install libldap2-dev -y 
 RUN docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu
 RUN docker-php-ext-install ldap
-ENV COMPOSER_PATH=/usr/local/bin/composer
+ENV COMPOSER_PATH "/usr/local/bin/composer"
 
 WORKDIR /var/www/symfony
