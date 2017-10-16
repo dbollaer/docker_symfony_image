@@ -1,0 +1,49 @@
+{
+  "name": "ugent/default-symfony-project",
+  "type": "coding-standard",
+  "description": "Default template",
+  "keywords": [
+    "Symfony3"
+  ],
+  "authors": [
+    {
+      "name": "Danny Bollaert",
+      "email": "Danny.Bollaert@UGent.be"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.9",
+    "bjeavons/zxcvbn-php": "^0.2.0",
+    "bmatzner/fontawesome-bundle": "^4.6",
+    "braincrafted/bootstrap-bundle": "^2.2",
+    "codete/form-generator-bundle": "^1.3.0",
+    "components/jquery": "^3.1",
+    "doctrine/doctrine-bundle": "^1.6",
+    "doctrine/doctrine-cache-bundle": "^1.2",
+    "doctrine/orm": "^2.5",
+    "eightpoints/guzzle-bundle": "^5.3",
+    "guzzlehttp/guzzle": "^6.3",
+    "hampe/zurb-ink-bundle": "^2.2",
+    "incenteev/composer-parameter-handler": "^2.0",
+    "jms/serializer-bundle": "^2.0",
+    "ldaptools/ldaptools": "^0.24.0",
+    "ldaptools/ldaptools-bundle": "^0.7.0",
+    "league/tactician-bundle": "^0.4.1",
+    "liip/monitor-bundle": "dev-master",
+    "oyejorge/less.php": "v1.7.0.10",
+    "ramsey/uuid": "^3.6",
+    "roave/security-advisories": "dev-master",
+    "sensio/distribution-bundle": "^5.0",
+    "sensio/framework-extra-bundle": "^3.0.2",
+    "symfony/assetic-bundle": "^2.8",
+    "symfony/ldap": "^3.3",
+    "symfony/monolog-bundle": "^2.8",
+    "symfony/polyfill-apcu": "^1.0",
+    "symfony/swiftmailer-bundle": "^2.3",
+    "symfony/symfony": "3.3.*",
+    "symfony/validator": "^3.3",
+    "symfony/web-server-bundle": "^3.3",
+    "twbs/bootstrap": "^3.3",
+    "twig/twig": "^1.0||^2.0"
+  }
+}
