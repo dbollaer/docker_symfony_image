@@ -6,18 +6,13 @@ ARG TIMEZONE
 MAINTAINER Danny Bollaert <Danny.Bollaert@gmail.com>
 
 RUN apt-get install curl -y
-RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - && apt-get install nodejs -y
-RUN npm install webpack -g
-RUN npm install typescript -g
-RUN npm install cli -g
 
 RUN apt-get update && apt-get install --force-yes -y \
     openssl \
     git \
     unzip \
-    nodejs \
-    openjdk-7-jdk \
-    ant \
+    curl \
+    zip \
     devscripts \
     build-essential \
     lintian \
@@ -30,8 +25,7 @@ RUN apt-get update && apt-get install --force-yes -y \
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN composer --version
-# Install fpm
-RUN gem install --no-ri --no-rdoc fpm
+
 
 # Set timezone
 RUN ln -snf /usr/share/zoneinfo/${TIMEZONE} /etc/localtime && echo ${TIMEZONE} > /etc/timezone
@@ -61,9 +55,6 @@ RUN echo 'alias sf3="php bin/console"' >> ~/.bashrc
 RUN mkdir -p /root/.ssh
 RUN echo "Host *\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
 
-RUN apt-get install libldap2-dev -y 
-RUN docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu
-RUN docker-php-ext-install ldap
 ENV COMPOSER_PATH "/usr/local/bin/composer"
 
 ADD .  /var/www/symfony
